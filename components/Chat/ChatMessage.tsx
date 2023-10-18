@@ -126,11 +126,12 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
 
   return (
     <div
-      className={`group md:px-4 ${
-        message.role === 'assistant'
-          ? 'border-b border-black/10 bg-gray-50 text-gray-800 dark:border-gray-900/50 dark:bg-[#444654] dark:text-gray-100'
-          : 'border-b border-black/10 bg-white text-gray-800 dark:border-gray-900/50 dark:bg-[#343541] dark:text-gray-100'
-      }`}
+    //make pink changes fpr light mode
+    className={`group md:px-4 ${
+      message.role === 'assistant'
+      ? 'border-b border-pink-50 bg-pink-50 text-gray-800 dark:border-pink-50 dark:bg-pink-50 dark:text-gray-100'
+      : 'border-b border-pink-80 bg-pink-80 text-gray-800 dark:border-pink-80 dark:bg-pink-80 dark:text-gray-100'
+    }`}
       style={{ overflowWrap: 'anywhere' }}
     >
       <div className="relative m-auto flex p-4 text-base md:max-w-2xl md:gap-6 md:py-6 lg:max-w-2xl lg:px-0 xl:max-w-3xl">
