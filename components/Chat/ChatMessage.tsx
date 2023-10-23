@@ -126,7 +126,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
 
   return (
     <div
-    //make pink changes for light mode
+    //make blue changes for light mode
     className={`group md:px-4 ${
       message.role === 'assistant'
         ? 'border-b border-black/10 bg-gray-50 text-gray-800 dark:border-gray-900/50 dark:bg-[#444654] dark:text-gray-100'

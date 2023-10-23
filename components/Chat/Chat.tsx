@@ -348,7 +348,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   }, [messagesEndRef]);
 
   return (
-    <div className="relative flex-1 overflow-hidden bg-purple-100 dark:bg-[#343541]">
+    <div className="relative flex-1 overflow-hidden bg-blue-100 dark:bg-[#343541]">
 
       {!(apiKey || serverSideApiKeyIsSet) ? (
         <div className="mx-auto flex h-full w-[300px] flex-col justify-center space-y-6 sm:w-[600px]">
@@ -440,7 +440,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
               </>
             ) : (
               <>
-                <div className="sticky top-0 z-10 flex justify-center border border-b-neutral-300 bg-pink-200 py-2 text-sm text-neutral-500 dark:border-none dark:bg-[#444654] dark:text-neutral-200">
+                <div className="sticky top-0 z-10 flex justify-center border border-b-neutral-300 bg-blue-200 py-2 text-sm text-neutral-500 dark:border-none dark:bg-[#444654] dark:text-neutral-200">
                   {t('Model')}: {selectedConversation?.model.name} | {t('Temp')}
                   : {selectedConversation?.temperature} |
                   <button
@@ -471,7 +471,6 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                     messageIndex={index}
                     onEdit={(editedMessage) => {
                       setCurrentMessage(editedMessage);
-                      // discard edited message and the ones that come after then resend
                       handleSend(
                         editedMessage,
                         selectedConversation?.messages.length - index,
@@ -483,7 +482,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                 {loading && <ChatLoader />}
 
                 <div
-                  className="h-[162px] bg-purple-100 dark:bg-[#343541]"
+                  className="h-[162px] bg-blue-100 dark:bg-[#343541]"
 
                   ref={messagesEndRef}
                 />

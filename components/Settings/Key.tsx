@@ -35,7 +35,7 @@ export const Key: FC<Props> = ({ apiKey, onApiKeyChange }) => {
   }, [isChanging]);
 
   return isChanging ? (
-    <div className="duration:200 flex w-full cursor-pointer items-center rounded-md py-3 px-3 transition-colors hover:bg-purple-400">
+    <div className="duration:200 flex w-full cursor-pointer items-center rounded-md py-3 px-3 transition-colors hover:bg-blue-400">
       <IconKey size={18} />
 
       <input

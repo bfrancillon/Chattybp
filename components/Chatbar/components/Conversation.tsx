@@ -116,11 +116,11 @@ export const ConversationComponent = ({ conversation }: Props) => {
         </div>
       ) : (
         <button
-          className={`flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200 hover:bg-purple-300 ${
+          className={`flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200 hover:bg-blue-300 ${
             messageIsStreaming ? 'disabled:cursor-not-allowed' : ''
           } ${
             selectedConversation?.id === conversation.id
-              ? 'bg-purple-400'
+              ? 'bg-blue-400'
               : ''
           }`}
           onClick={() => handleSelectConversation(conversation)}
